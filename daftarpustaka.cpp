@@ -85,3 +85,39 @@ void ListDapus() {
     }
     ifile.close();
 }
+
+int main() {
+    int pilihan;
+    do {
+    cout << endl << "---------------------------------" << endl;
+    cout << "|                               |" << endl;
+    cout << "| Program Format Daftar Pustaka |" << endl;
+    cout << "|          (APA Style)          |" << endl;
+    cout << "|                               |" << endl;
+    cout << "---------------------------------" << endl;
+    cout << "| 1. Tambah daftar pustaka      |" << endl;
+    cout << "| 2. Lihat daftar pustaka       |" << endl;
+    cout << "| 3. Keluar                     |" << endl;
+    cout << "---------------------------------" << endl;
+    cout << "Masukkan pilihan : ";
+    cin >> pilihan;
+    cin.ignore();
+
+    switch (pilihan) {
+            case 1:
+                BuatDapus();
+                break;
+            case 2:
+                ListDapus();
+                break;
+            case 3:
+                cout << "Terimakasih Sudah Menggunakan Program Kami!" << endl;
+                cout << "Program by Kelompok 7 DDP Ilkom B" << endl;
+                break;
+            default:
+                cout << "Pilihan tidak ada. Coba lagi." << endl;
+        }
+    } while (pilihan != 3);
+
+    return 0;
+}
